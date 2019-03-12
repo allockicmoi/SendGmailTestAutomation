@@ -30,6 +30,7 @@ public class sendemail {
    
    @Given("^User navigates to gmail signin page$") 
    public void goToGmail() { 
+	   //set path to ChromeDriver below
 	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\alloc\\Documents\\chromedriver\\chromedriver.exe");
       driver = new ChromeDriver(); 
       driver.navigate().to("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
@@ -89,6 +90,7 @@ public class sendemail {
    public void selectImage(String arg1) throws IOException, InterruptedException {
 	   driver.findElement(By.cssSelector("div[class='a1 aaA aMZ']")).click();
 	   //Thread.sleep(2000);
+	   //Update Below the appropriate path to your .exe file
 	   Runtime.getRuntime().exec(new String[]{"C://Users//alloc//Documents//uploadfile3.exe",arg1});
 	   //Thread.sleep(2000);
 	   WebElement attachbutton = driver.findElement(By.cssSelector("div[class='a1 aaA aMZ']")); 
